@@ -9,19 +9,21 @@ const Card = (props) => {
         </div>
   );
 };
-
+let data = [
+  {name:"Suthas Ganeshathasan",
+  avatar_url:"https://avatars0.githubusercontent.com/u/24394596?v=4",
+  company:"Centennial College"},
+  {name:"Paul O'Shannessy",
+  avatar_url:"https://avatars.githubusercontent.com/u/8445?v=3",
+  company:"Facebook"}
+]
 const CardList =  (props) => {
   return (
     <div>
-      <Card name="Suthas Ganeshathasan"
-      avatar_url="https://avatars0.githubusercontent.com/u/24394596?v=4"
-      company="Centennial College"/>
-      <Card name="Paul O'Shannessy"
-      avatar_url="https://avatars.githubusercontent.com/u/8445?v=3"
-      company="Facebook"/>
+      {props.cards.map(card => <Card {...card}/>)}
     </div>
 
   )
 }
 
-ReactDOM.render(<CardList />, mountNode);
+ReactDOM.render(<CardList  cards={data}/>, mountNode);
