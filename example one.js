@@ -17,7 +17,7 @@ class Button extends React.Component {
 
 const Result = (props) => {
   return(
-    <div>{props.counter}<div>
+    <div>{props.counter}</div>
   );
 };
 
