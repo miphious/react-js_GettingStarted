@@ -32,9 +32,9 @@ class App extends React.Component {
     return(
       <div>
       <Button  onClickFunction={this.incrementCounter}/>
-      <Result />
+      <Result counter = {this.state.counter} />
       </div>
     );
   }
 }
-ReactDOM.render(<Button />, mountNode);
+ReactDOM.render(<App />, mountNode);
