@@ -25,5 +25,16 @@ const CardList =  (props) => {
 
   )
 }
+class Form extends React.Component {
+  render(){
+      return(
+        <form>
+          <input type="text" placeholder="Github username" />
+          <button type"submit"> Add Card</button>
+        </form>
 
+      )
+  }
+}
+class App extends React.Component
 ReactDOM.render(<CardList  cards={data}/>, mountNode);
